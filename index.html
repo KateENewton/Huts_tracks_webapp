@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title> Tramping Web Application</title>
+    <script
+    src="https://js.arcgis.com/calcite-components/1.0.0-beta.77/calcite.esm.js"
+    type="module"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://js.arcgis.com/calcite-components/1.0.0-beta.77/calcite.css"
+  />
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.22/esri/themes/light/main.css"
+    />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.arcgis.com/4.22/"></script>
+    <script src="renderers.js"></script>
+    <script src="map.js"></script>
+    
+  </head>
+  <body>
+    <calcite-shell content-behind>
+        <h2 id="header-title" slot="header">Tracks and Huts New Zealand</h2>
+        <calcite-shell-panel slot="primary-panel" detached>
+          <calcite-action-bar slot="action-bar"> 
+            <calcite-action
+              data-action-id="profile"
+              icon="altitude"
+              text="Profile"
+            ></calcite-action>
+            <calcite-action
+              data-action-id="basemaps"
+              icon="basemap"
+              text="Basemap"
+            ></calcite-action>
+            <calcite-action
+              data-action-id="layers"
+              icon="layers"
+              text="Layers"
+            ></calcite-action>
+          </calcite-action-bar>
+          <calcite-panel
+            heading="Elevation Profile"
+            height-scale="1"
+            data-panel-id="profile"
+            hidden
+          >
+            <div id="profile"></div>
+          </calcite-panel>
+          <calcite-panel
+            heading="Basemap"
+            height-scale="1"
+            data-panel-id="basemaps"
+            hidden
+          >
+            <div id="basemaps"></div>
+          </calcite-panel>
+          <calcite-panel
+            heading="Layers"
+            height-scale="1"
+            data-panel-id="layers"
+            hidden
+          >
+            <div id="layers"></div>
+            
+          </calcite-panel>
+        </calcite-shell-panel>
+        <div id="viewDiv"></div>
+        <!-- <div id="infoDiv">
+            <input class="esri-component esri-widget--button esri-widget esri-interactive" 
+            type="button" id=""switch-btn"
+            value="3d"/> -->
+              </calcite-shell>
+  </body>
+</html>
